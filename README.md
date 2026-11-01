@@ -1343,6 +1343,7 @@ Labels are applied conservatively. Where a tool's free access is ambiguous, the 
 - [TinyPNG](https://tinypng.com/) — Compresses PNG, JPEG and WebP images with smart lossy optimization. **Free tier · monthly compression limits on the web tool.**
 
 - [Bulk Resize Photos](https://bulkresizephotos.com) — Unlimited free batch image resizer with no sign-up; images are processed in your browser and never uploaded. **Free · Local/offline · 'Private — no uploading'.**
+- [imgmov Start-Image Resizer](https://imgmov.com/resize-image-for-ai-video) — Crops or pads an image to exact start-frame dimensions and downloads JPEG or PNG with an export-size check. **Free · Local/offline · No account; parent AI generation offline when checked 2026-11-01.**
 - [Ezgif](https://ezgif.com) — Free online GIF and animation maker, converter and optimizer with optional in-browser local processing. **Free · Most tools upload files; Oct 2026 added a Local processing option and WASM bulk optimizer.**
 
 ### QR codes, barcodes and text tools
