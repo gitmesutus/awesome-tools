@@ -355,6 +355,7 @@ Labels are applied conservatively. Where a tool's free access is ambiguous, the 
 - [Mochi](https://www.mochi.cards) — Markdown notes and spaced-repetition flashcards, free forever with no sign-up; runs offline on desktop, mobile and web. **Free · Local/offline.**
 - [StudyFetch](https://www.studyfetch.com) — Turns lectures, slides and notes into flashcards, quizzes, study plans and an AI tutor. **Free tier · Free to start without a credit card; deeper AI features on paid plans.**
 - [Khanmigo](https://www.khanmigo.ai) — Khan Academy's AI teaching assistant, 100% free for teachers worldwide, plus free quiz and report-comment generators. **Free · Teacher tools free (Microsoft-sponsored); learner tutoring is paid ($4/month, US).**
+- [StudyArena](https://studyarena.com) - Compares three blind AI answers to a study question, then lets you vote and reveal the models. **Free tier · account required · model choice and six-answer comparisons require Supporter.**
 
 ### AI presentations, slides and visual storytelling
 
