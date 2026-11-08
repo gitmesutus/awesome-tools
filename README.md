@@ -237,6 +237,7 @@ Labels are applied conservatively. Where a tool's free access is ambiguous, the 
 - [SearXNG](https://github.com/searxng/searxng) — Self-hosted metasearch engine that aggregates results and can add AI answers. **Open source · Free · Local/offline.**
 - [Exa](https://exa.ai/) — Semantic search API built for AI agents and retrieval pipelines rather than keyword queries. **Free credits · account required.**
 - [Tavily](https://tavily.com/) — Real-time web search and extraction API designed for LLMs and agents. **Free credits · about 1,000 credits/month.**
+- [Arcmira](https://arcmira.com) — Searches indexed YouTube and podcast transcripts for timestamped quotes and source links. **Free tier · account required · 1,000 credits/month · newest 30 days withheld · first-page results only.**
 
 - [Vane (formerly Perplexica)](https://github.com/ItzCrazyKns/Vane) — MIT self-hosted answer engine blending SearXNG search with LLM citations, formerly Perplexica. **Free · Open source · Bring your own model API key or local model.**
 
@@ -285,6 +286,7 @@ Labels are applied conservatively. Where a tool's free access is ambiguous, the 
 - [Resoomer](https://resoomer.com/) — Summarizes, paraphrases and reads documents in PDF, DOCX and EPUB formats. **Free · advanced modes paid.**
 - [ElevenReader](https://elevenlabs.io/reader/) — Reads articles and documents aloud in natural AI voices and summarizes what it reads. **Free · monthly character allowance.**
 - [Scholarcy](https://www.scholarcy.com/article-summarizer) — Breaks research papers into flashcards, summaries and reference lists. **Limited free · about 3 summaries/day.**
+- [Watch YouTube Highlights](https://funcove.dev/watchhighlights/) — Selects original passages from captioned YouTube videos to watch in Chrome or Firefox, with text summaries and current-video questions. **Free tier · one successful AI request per UTC day per stored browser account, shared across highlights, summaries, chat and new audio · captions required · cloud processing.**
 
 - [AnythingLLM](https://anythingllm.com) — Open-source desktop app that chats with your PDFs, docs and websites locally, keeping all data and vector storage on your machine. **Open source · Local/offline.**
 - [Khoj](https://khoj.dev) — Self-hosted open-source AI that turns your notes, files and web clips into a personal second brain you fully control. **Open source · Self-host free; hosted cloud offering has paid plans.**
@@ -355,7 +357,7 @@ Labels are applied conservatively. Where a tool's free access is ambiguous, the 
 - [Mochi](https://www.mochi.cards) — Markdown notes and spaced-repetition flashcards, free forever with no sign-up; runs offline on desktop, mobile and web. **Free · Local/offline.**
 - [StudyFetch](https://www.studyfetch.com) — Turns lectures, slides and notes into flashcards, quizzes, study plans and an AI tutor. **Free tier · Free to start without a credit card; deeper AI features on paid plans.**
 - [Khanmigo](https://www.khanmigo.ai) — Khan Academy's AI teaching assistant, 100% free for teachers worldwide, plus free quiz and report-comment generators. **Free · Teacher tools free (Microsoft-sponsored); learner tutoring is paid ($4/month, US).**
-- [StudyArena](https://studyarena.com) - Compares three blind AI answers to a study question, then lets you vote and reveal the models. **Free tier · account required · model choice and six-answer comparisons require Supporter.**
+- [StudyArena](https://studyarena.com) — Compares three blind AI answers to a study question, then lets you vote and reveal the models. **Free tier · account required · model choice and six-answer comparisons require Supporter.**
 
 ### AI presentations, slides and visual storytelling
 
@@ -419,6 +421,7 @@ Labels are applied conservatively. Where a tool's free access is ambiguous, the 
 - [Opus Clip](https://www.opus.pro/) — Finds the best moments in long videos and reframes them into captioned vertical clips with virality scores. **Free tier · 60 processing minutes/month · watermark, 3-day export window.**
 - [Descript](https://www.descript.com/) — Edits audio and video by editing the transcript, with screen recording, Studio Sound and filler removal. **Free tier · 60 media minutes/month · 720p watermarked exports.**
 - [Wisecut](https://wisecut.ai/) — Auto-cuts silence, adds captions, reframes to vertical and pulls highlight clips from long recordings. **Free tier · 30 minutes/month · 480p exports capped at 3 minutes.**
+- [YouTranscripts](https://www.youtranscripts.com/) — Reads, searches, translates and exports available captions from supported YouTube videos. **Free · captions depend on the source video · a free account is required for AI summaries.**
 - [Whisper](https://github.com/openai/whisper) — OpenAI's speech-to-text model you can run yourself for offline transcription and translation. **Open source · Open weights · Local/offline.**
 
 ### AI music and sound generation
@@ -1118,6 +1121,7 @@ Labels are applied conservatively. Where a tool's free access is ambiguous, the 
 - [darktable](https://github.com/darktable-org/darktable) — Non-destructive RAW photo developer and workflow manager with full colour management. **Open source.**
 - [RawTherapee](https://github.com/Beep6581/RawTherapee) — Cross-platform RAW converter with powerful demosaicing, exposure and colour tools. **Open source.**
 - [MyPaint](https://github.com/mypaint/MyPaint) — Pressure-sensitive painting app with an infinite canvas built for sketching. **Open source.**
+- [PeerBrush](https://peerbrush.com/) — Desktop painting and raster editor with brushes, layers, masks and read/write support for supported layered PSDs. **Free · Open source · Local/offline · GPL-3.0-only; Windows x64, Apple silicon macOS and Ubuntu 24.04 amd64.**
 - [Pixlr](https://pixlr.com/) — Online photo editor (Pixlr E and X) with AI generators, one-click background removal and batch editing. **Limited free · ads · premium tools and exports locked.**
 
 - [digiKam](https://www.digikam.org) — Advanced open-source photo manager with face recognition, geolocation, RAW editing and batch processing. **Open source.**
@@ -1344,7 +1348,7 @@ Labels are applied conservatively. Where a tool's free access is ambiguous, the 
 - [TinyPNG](https://tinypng.com/) — Compresses PNG, JPEG and WebP images with smart lossy optimization. **Free tier · monthly compression limits on the web tool.**
 
 - [Bulk Resize Photos](https://bulkresizephotos.com) — Unlimited free batch image resizer with no sign-up; images are processed in your browser and never uploaded. **Free · Local/offline · 'Private — no uploading'.**
-- [imgmov Start-Image Resizer](https://imgmov.com/resize-image-for-ai-video) — Crops or pads an image to exact start-frame dimensions and downloads JPEG or PNG with an export-size check. **Free · Local/offline · No account; parent AI generation offline when checked 2026-11-01.**
+- [imgmov Start-Image Resizer](https://imgmov.com/resize-image-for-ai-video) — Crops or pads an image to exact start-frame dimensions and downloads JPEG or PNG with an export-size check. **Free · Local/offline · No account; images stay in the browser, while the parent AI video generator sells paid exports.**
 - [Ezgif](https://ezgif.com) — Free online GIF and animation maker, converter and optimizer with optional in-browser local processing. **Free · Most tools upload files; Oct 2026 added a Local processing option and WASM bulk optimizer.**
 
 ### QR codes, barcodes and text tools
@@ -1378,6 +1382,7 @@ Labels are applied conservatively. Where a tool's free access is ambiguous, the 
 - [htaccess Tester](https://htaccess.madewithlove.com) — Paste Apache .htaccess rewrite rules with a URL to preview exactly how the server would rewrite the request. **Free · Labeled 'Free developer tool'; no quota documented.**
 - [Crontab.guru](https://crontab.guru) — Free editor that explains cron schedule expressions in plain language as you edit them, with examples. **Free · Run by Cronitor (promotes paid monitoring), editor itself free with no signup.**
 - [RegExr](https://regexr.com) — Free browser-based regex tester for JavaScript and PHP/PCRE with live results, tests, cheatsheet and community patterns. **Free · Ad-supported; license not confirmed on official page so not labeled open-source. Distinct from Regex101 (already listed).**
+- [Jvlang AI Codex Usage Tracker](https://jvlangai.com/codex-reset#tracker) — Browser-local Codex weekly countdown with manual /status calibration, usage-versus-time progress and calendar export. **Free · no account, API key or card · Chinese interface; values stay in the browser and manual /status entry is required.**
 
 ### Archiving, compression and extraction
 <!-- verified: 2026-10-16 -->
@@ -1876,6 +1881,7 @@ Only offers that are broadly verifiable are listed here; eligibility, regions an
 - [GitHub Copilot Free for students](https://github.com/features/copilot) — Copilot included for verified students on GitHub Education. **Student offer.**
 - [Autodesk Education](https://www.autodesk.com/education/edu-software/overview) — Free educational licenses of professional design and engineering software. **Student offer · annual renewal.**
 - [Microsoft 365 Education](https://www.microsoft.com/en-us/education/products/office) — Free Word, PowerPoint and OneDrive for eligible schools and students. **Student offer · eligibility depends on institution.**
+- [Kilobat (students)](https://kilobat.app/students) — macOS network monitor with connection diagnostics, metered-network budgets and call/stutter tests. **Student offer · one year of Pro for two Macs with a school email, renewable while enrolled · no payment or account required · macOS only; the desktop app is proprietary.**
 
 ## Contributing
 
