@@ -339,7 +339,8 @@
   // ---------------------------------------------------------------- chips & filters
   function renderChips() {
     const chips = [];
-    if (state.q) chips.push({ key: "q", icon: "search", label: `“${state.q.trim()}”` });
+    // The query is already visible in the search field directly above the
+    // toolbar, so a second “query” chip only adds noise.
     if (state.all) chips.push({ key: "all", icon: "list", label: "All tools" });
     if (state.cat) {
       const c = catById.get(state.cat);
@@ -379,6 +380,22 @@
       return `<button class="qf" type="button" data-tag="${esc(l.id)}" aria-pressed="${on}">
         ${icon(l.icon)}<span>${esc(l.name)}</span><span class="qf-n">${count}</span></button>`;
     }).join("");
+    queueQuickFilterFade();
+  }
+
+  // The mobile filter strip only needs its edge fade when it actually
+  // overflows; a lone row of three chips should not look cut off.
+  let quickFilterFadeFrame = 0;
+  function queueQuickFilterFade() {
+    if (quickFilterFadeFrame) return;
+    quickFilterFadeFrame = requestAnimationFrame(() => {
+      quickFilterFadeFrame = 0;
+      const el = els.quickFilters;
+      // scrollWidth includes the fade padding we may have added; subtract it
+      // so the padding cannot keep itself alive once the chips fit again.
+      const pad = el.classList.contains("is-scrollable") ? 28 : 0;
+      el.classList.toggle("is-scrollable", el.scrollWidth - pad > el.clientWidth + 1);
+    });
   }
 
   // ---------------------------------------------------------------- sidebar
@@ -516,12 +533,34 @@
 
   // The single search form lives in the hero on the home screen and moves
   // into the top bar while browsing — one input, no duplicated controls.
+  // Moving a focused element between parents drops focus, so remember the
+  // caret and restore it after the move. Otherwise the first keystroke ends
+  // the typing session and the user has to click the field again.
   function placeSearch() {
     const home = !isActive();
     const slot = home ? els.heroSlot : els.topbarSlot;
-    if (slot && els.searchForm.parentElement !== slot) slot.appendChild(els.searchForm);
+    let hadFocus = false;
+    let selStart = null;
+    let selEnd = null;
+    if (slot && els.searchForm.parentElement !== slot) {
+      hadFocus = document.activeElement === els.q;
+      if (hadFocus) {
+        selStart = els.q.selectionStart;
+        selEnd = els.q.selectionEnd;
+      }
+      slot.appendChild(els.searchForm);
+    }
     els.searchForm.classList.toggle("in-hero", home);
+    // Update the view before restoring focus: while data-view is still
+    // "home" the top-bar slot is display:none, and a hidden field cannot
+    // take focus.
     document.body.dataset.view = home ? "home" : "browse";
+    if (hadFocus) {
+      els.q.focus({ preventScroll: true });
+      if (selStart !== null && selEnd !== null) {
+        try { els.q.setSelectionRange(selStart, selEnd); } catch (e) { /* type=search */ }
+      }
+    }
   }
 
   // ---------------------------------------------------------------- apply
@@ -612,7 +651,9 @@
   // ---------------------------------------------------------------- actions
   function setQ(v, write) {
     state.q = v;
-    els.q.value = v;
+    // Re-assigning an identical value can still reset the caret in some
+    // browsers, so only write when the field actually differs.
+    if (els.q.value !== v) els.q.value = v;
     clearToolParam();
     apply({ write: write || "replace" });
   }
@@ -726,6 +767,7 @@
     $$("[data-icon]").forEach((el) => (el.innerHTML = icon(el.dataset.icon)));
 
     els.q.addEventListener("input", () => setQ(els.q.value, "replace"));
+    window.addEventListener("resize", queueQuickFilterFade);
     els.searchForm.addEventListener("submit", (e) => {
       e.preventDefault();
       els.q.blur();

@@ -613,6 +613,8 @@ body[data-view="browse"] .hero-search-slot { display: none; }
 #sortSel:hover { border-color: var(--border-strong); }
 
 .chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; min-width: 0; }
+/* No active filters: don't leave an empty flex item adding a gap. */
+.chips:empty { display: none; }
 
 .chip {
   display: inline-flex;
@@ -708,6 +710,9 @@ body[data-view="browse"] .hero-search-slot { display: none; }
   display: flex;
   flex-direction: column;
   border-top: 1px solid var(--border);
+  /* Keep the first row clear of the sticky top bar when #results is used
+     as a focus/skip target. */
+  scroll-margin-top: calc(var(--topbar-h) + 16px);
 }
 
 .card {
@@ -953,6 +958,9 @@ body[data-view="browse"] .hero-search-slot { display: none; }
 /* Tablet / narrow laptop: two settled columns. */
 @media (max-width: 1100px) {
   .cat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 34px; }
+  /* With an odd number of categories the last card would sit alone in the
+     left column and leave a conspicuous hole. Let it span the row. */
+  .cat-grid > .cat-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
 
 @media (max-width: 980px) {
@@ -1015,10 +1023,33 @@ body[data-view="browse"] .hero-search-slot { display: none; }
      them, so tighten the gap rather than adding per-item padding. */
   .stats { gap: 3px 16px; }
   .stats .stat-n { font-size: 14px; }
-  /* Toolbar stacks here: controls wrap instead of colliding. */
-  .toolbar { gap: 10px; }
-  .toolbar-right { flex-wrap: wrap; gap: 8px 10px; }
+  /* Toolbar stacks here: controls wrap instead of colliding. Giving the
+     right-hand group the full row keeps the count/sort controls aligned
+     with the content edge instead of stranded beside a wrapped chip. */
+  .toolbar { gap: 10px; align-items: flex-start; }
+  .toolbar-right { width: 100%; margin-left: 0; flex-wrap: wrap; gap: 8px 10px; }
   #clearAll { white-space: nowrap; }
+  /* The top bar grows to two rows here, so the skip target needs more
+     clearance than the desktop token. */
+  .results { scroll-margin-top: 118px; }
+  /* One swipeable strip instead of 3–4 wrapped rows of chips. */
+  .quickfilters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+  }
+  .quickfilters::-webkit-scrollbar { display: none; }
+  .quickfilters .qf { flex: none; }
+  /* Only fade the edge when there is actually more content to reach;
+     padding keeps the last chip clear of the fade at the end of the scroll. */
+  .quickfilters.is-scrollable {
+    padding-right: 28px;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
+  }
 }
 
 @media (max-width: 480px) {
