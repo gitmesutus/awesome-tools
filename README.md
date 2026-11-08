@@ -1802,6 +1802,8 @@ Lesser-known tools that quietly solve a real problem. All verified to the same s
 - [git-cliff](https://git-cliff.org/) — Configurable changelog generator that turns conventional commits into release notes from the command line. **Free · Open source · Local/offline · MIT.**
 - [OpenCommit](https://github.com/di-sukharev/opencommit) — AI commit-message generator that drafts conventional commits from your staged diffs inside the terminal. **Free · Open source · MIT; optional premium tier; basic local usage free.**
 
+- [Big Walk Signal Planner](https://thebigwalk.world/en/protocols) — Agree on count, gesture and yes/no signal codes before a cooperative Big Walk game session. **Free · unofficial, English/Simplified Chinese; optional shared plans are stored for 30 days and can be revoked.**
+
 ## Popular Free Alternatives
 
 Where a credible free substitute exists for a product people usually pay for:
